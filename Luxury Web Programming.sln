@@ -1,0 +1,169 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 웹 프로그래밍과 HTML5 개요", "01 웹 프로그래밍과 HTML5 개요", "{CDD69359-F964-4F0D-8218-FC8EA0691BF2}"
+	ProjectSection(SolutionItems) = preProject
+		HTML5 기능.txt = HTML5 기능.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 HTML5 기본문서 만들기", "02 HTML5 기본문서 만들기", "{C3C87F6E-2F52-4E6A-8C07-F0275810220F}"
+	ProjectSection(SolutionItems) = preProject
+		1. HTML 페이지 기본.txt = 1. HTML 페이지 기본.txt
+		2. HTML 기본 문서 만들기.txt = 2. HTML 기본 문서 만들기.txt
+		3. 고급 문서 만들기.txt = 3. 고급 문서 만들기.txt
+		4. 하이퍼링크와 항해.txt = 4. 하이퍼링크와 항해.txt
+		5. 인라인 프레임.txt = 5. 인라인 프레임.txt
+		6. 미디어 삽입.txt = 6. 미디어 삽입.txt
+		Example 2-01.html = Example 2-01.html
+		Example 2-02.html = Example 2-02.html
+		Example 2-03.html = Example 2-03.html
+		Example 2-04.html = Example 2-04.html
+		Example 2-05.html = Example 2-05.html
+		Example 2-06.html = Example 2-06.html
+		Example 2-07.html = Example 2-07.html
+		Example 2-08.html = Example 2-08.html
+		Example 2-09.html = Example 2-09.html
+		Example 2-10.html = Example 2-10.html
+		Example 2-11 iframe1.html = Example 2-11 iframe1.html
+		Example 2-11 iframe2.html = Example 2-11 iframe2.html
+		Example 2-11.html = Example 2-11.html
+		Example 2-12.html = Example 2-12.html
+		Example 2-13 sitelist.html = Example 2-13 sitelist.html
+		Example 2-13.html = Example 2-13.html
+		Example 2-14.html = Example 2-14.html
+		Example 2-15.html = Example 2-15.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "문제", "문제", "{9C19E0A6-31E8-431D-82FB-B8F706F59446}"
+	ProjectSection(SolutionItems) = preProject
+		01 Open Challenge.html = 01 Open Challenge.html
+		Question 1-01.txt = Question 1-01.txt
+		Question 1-02.txt = Question 1-02.txt
+		Question 1-03.html = Question 1-03.html
+		Question 1-04.html = Question 1-04.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "문제", "문제", "{A0B68AEB-302B-41E3-B8BD-6183720E1348}"
+	ProjectSection(SolutionItems) = preProject
+		02 Open Challenge.html = 02 Open Challenge.html
+		Question 2-01.html = Question 2-01.html
+		Question 2-02.html = Question 2-02.html
+		Question 2-03.html = Question 2-03.html
+		Question 2-04.html = Question 2-04.html
+		Question 2-05.html = Question 2-05.html
+		Question 2-06.html = Question 2-06.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 HTML5 문서 구조화와 웹 폼", "03 HTML5 문서 구조화와 웹 폼", "{8D017848-8996-49DC-ACBB-BA00EBE67BFC}"
+	ProjectSection(SolutionItems) = preProject
+		1. HTML5의 문서 구조화.txt = 1. HTML5의 문서 구조화.txt
+		2. 웹 폼.txt = 2. 웹 폼.txt
+		3. 폼 만들기.txt = 3. 폼 만들기.txt
+		Example 3-01.html = Example 3-01.html
+		Example 3-02.html = Example 3-02.html
+		Example 3-03.html = Example 3-03.html
+		Example 3-04.html = Example 3-04.html
+		Example 3-05.html = Example 3-05.html
+		Example 3-06.html = Example 3-06.html
+		Example 3-07.html = Example 3-07.html
+		Example 3-08.html = Example 3-08.html
+		Example 3-09.html = Example 3-09.html
+		Example 3-10.html = Example 3-10.html
+		Example 3-11.html = Example 3-11.html
+		Example 3-12.html = Example 3-12.html
+		Example 3-13.html = Example 3-13.html
+		Example 3-14.html = Example 3-14.html
+		Example 3-15.html = Example 3-15.html
+		Example 3-16.html = Example 3-16.html
+		Example 3-17.html = Example 3-17.html
+		Example 3-18.html = Example 3-18.html
+		Example 3-19.html = Example 3-19.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "문제", "문제", "{E9C1B404-D431-4612-8ED5-C22E246ECC72}"
+	ProjectSection(SolutionItems) = preProject
+		03 Open Challenge survey.html = 03 Open Challenge survey.html
+		03 Open Challenge.html = 03 Open Challenge.html
+		Question 3-01.html = Question 3-01.html
+		Question 3-02.html = Question 3-02.html
+		Question 3-03.html = Question 3-03.html
+		Question 3-04.html = Question 3-04.html
+		Question 3-05.html = Question 3-05.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 CSS3로 웹 페이지 꾸미기", "04 CSS3로 웹 페이지 꾸미기", "{719FBC3C-D965-4F83-88E6-506A7A66CA93}"
+	ProjectSection(SolutionItems) = preProject
+		1. CSS3 스타일 시트 개요.txt = 1. CSS3 스타일 시트 개요.txt
+		2. CSS3 스타일 시트 만들기.txt = 2. CSS3 스타일 시트 만들기.txt
+		3. 셀렉터.txt = 3. 셀렉터.txt
+		4. 색과 텍스트 꾸미기.txt = 4. 색과 텍스트 꾸미기.txt
+		5. 박스 모델.txt = 5. 박스 모델.txt
+		6. 시각적 효과.txt = 6. 시각적 효과.txt
+		Example 4-01.html = Example 4-01.html
+		Example 4-02.html = Example 4-02.html
+		Example 4-03 CSS.css = Example 4-03 CSS.css
+		Example 4-03.html = Example 4-03.html
+		Example 4-04.html = Example 4-04.html
+		Example 4-05.html = Example 4-05.html
+		Example 4-06.html = Example 4-06.html
+		Example 4-07.html = Example 4-07.html
+		Example 4-08.html = Example 4-08.html
+		Example 4-09.html = Example 4-09.html
+		Example 4-10.html = Example 4-10.html
+		Example 4-11.html = Example 4-11.html
+		Example 4-12.html = Example 4-12.html
+		Example 4-13.html = Example 4-13.html
+		Example 4-14.html = Example 4-14.html
+		Example 4-15.html = Example 4-15.html
+		Example 4-16.html = Example 4-16.html
+		Example 4-17.html = Example 4-17.html
+		Example 4-18.html = Example 4-18.html
+		Example 4-19.html = Example 4-19.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "문제", "문제", "{5C372908-21EA-44C1-B82F-E25E08620E73}"
+	ProjectSection(SolutionItems) = preProject
+		04 Open Challenge survey.html = 04 Open Challenge survey.html
+		04 Open Challenge.html = 04 Open Challenge.html
+		Question 4-01.html = Question 4-01.html
+		Question 4-02.html = Question 4-02.html
+		Question 4-03.html = Question 4-03.html
+		Question 4-04.html = Question 4-04.html
+		Question 4-05.html = Question 4-05.html
+		Question 4-06.html = Question 4-06.html
+		Question 4-07.html = Question 4-07.html
+		Question 4-08.html = Question 4-08.html
+		Question 4-09.html = Question 4-09.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 CSS3 고급 활용", "5 CSS3 고급 활용", "{33DC0284-B1B9-4113-9CB8-D931BCF5026F}"
+	ProjectSection(SolutionItems) = preProject
+		1. 배치.txt = 1. 배치.txt
+		Example 5-01.html = Example 5-01.html
+		Example 5-02.html = Example 5-02.html
+		Example 5-03.html = Example 5-03.html
+		Example 5-04.html = Example 5-04.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "학교 과제", "학교 과제", "{51C78D77-E526-4D67-B235-32487C797C84}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+		script.js = script.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C19E0A6-31E8-431D-82FB-B8F706F59446} = {CDD69359-F964-4F0D-8218-FC8EA0691BF2}
+		{A0B68AEB-302B-41E3-B8BD-6183720E1348} = {C3C87F6E-2F52-4E6A-8C07-F0275810220F}
+		{E9C1B404-D431-4612-8ED5-C22E246ECC72} = {8D017848-8996-49DC-ACBB-BA00EBE67BFC}
+		{5C372908-21EA-44C1-B82F-E25E08620E73} = {719FBC3C-D965-4F83-88E6-506A7A66CA93}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F2B259F-F5F9-40BE-A668-99713EB1B125}
+	EndGlobalSection
+EndGlobal

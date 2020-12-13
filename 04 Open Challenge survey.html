@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        h1 {
+            color: brown;
+        }
+
+        hr {
+            border-width: 1px;
+        }
+
+        p {
+            font: 1em KoreanHNBRAM;
+        }
+
+        footer {
+            background-color: orange;
+            border-radius: 5px;
+        }
+
+        form {
+            background-color: lightpink;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        label {
+            font-weight: 500;
+            font-family: KoreanHNBRAM;
+            color: darkviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>설문지</h2>
+    소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.
+    <hr />
+    <form>
+        <label>학년</label>
+        <input type="radio" name="class" value="1" /> 1학년
+        <input type="radio" name="class" value="2" /> 2학년
+        <input type="radio" name="class" value="3" /> 3학년
+        <input type="radio" name="class" value="4" /> 4학년 <br /><br />
+
+        <label>성별</label>
+        <input type="radio" name="gender" value="m" /> 남자
+        <input type="radio" name="gender" value="g" /> 여자 <br /><br />
+
+        <label>관심 분야</label>
+        <select name="major">
+            <option selected value="1">모바일 소프트웨어</option>
+            <option value="2">모바일 앱</option>
+        </select><br /><br />
+
+        <label>진로(다중 선택)</label>
+        <input type="checkbox" name="job" value="1" /> 개발
+        <input type="checkbox" name="job" value="2" /> 기획
+        <input type="checkbox" name="job" value="3" /> 영업
+        <input type="checkbox" name="job" value="4" /> 창업 <br /><br />
+
+        <label>남기고 싶은 말</label> <br />
+        <textarea placeholder="글을 남겨주세요." cols="40" rows="10"></textarea><br /><br />
+    </form>
+
+
+    <footer>
+        <p>Copyright 2017 by Jo</p>
+    </footer>
+</body>
+</html>

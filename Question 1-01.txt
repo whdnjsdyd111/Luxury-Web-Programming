@@ -1,0 +1,1 @@
+<style> 태그 안에 span 안의 color = blue; 가 아닌 color : blue; 가 되야 한다.

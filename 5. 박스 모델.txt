@@ -1,0 +1,214 @@
+CSS3 에서는 박스 모델(Box Model)이란 각 HTML 태그 요소를 하나의 박스로 보고, 박스 크기, 박스 배경 색, 박스 여백 등
+HTML 태그를 박스로 다루는 체계를 뜻한다. 박스 모델은 HTML 태그의 모양을 보는 CSS3의 근본 시각이니 중요하다.
+
+			HTML 태그는 사각형 박스로 다루어짐
+
+CSS3는 각 HTML 요소를 콘텐츠, 패딩(padding), 테두리(border), 여백(margin)으로 구성된 사각형 박스로 다룬다.
+
+			박스의 구성
+
+HTML 태그 즉, 박스는 다음 4개의 영역으로 구성된 각 영역은 다음과 같다.
+
+- 콘텐츠 : HTML 태그의 텍스트나 이미지 부분
+- 패딩 : 콘텐츠를 직접 둘러싸고 있는 내부 여백
+- 테두리 : 패딩 외부의 외각선으로 직선이나 점선 혹은 이미지로 입힐 수 있음
+- 여백 : 박스의 맨 바깥 영역, 테두리 바깥 공간으로 아래위 인접한 태그와 만나는 공간
+
+185쪽 그림 4-14 참고
+
+			박스를 제어하는 CSS3 프로퍼티
+
+프로퍼티를 적절한 값으로 주면 HTML 태그가 출력되는 박스의 색과 모양을 제어할 수 있다.
+
+		박스의 크기
+
+박스 크기를 제어하자면 width, height, margin, padding 등으로 제어가 가능하다.
+
+div.box {
+	width: 150px;
+	height: 50px;
+	margin: 40px;
+	border-width: 30px;
+	padding: 20px;
+}
+
+<div class="box">
+	Box
+</div>
+
+Example 4-11		<div> 박스 모델 보기
+
+				콘텐츠		패딩					테두리					여백
+
+크기 관련		width		padding-top			border-top-width		margin-top
+프로퍼티			height		padding-right		border-right-width		margin-right
+							padding-bottom		border-bottom-width		margin-bottom
+							padding-left		border-left-width		margin-left
+
+크기 관련					padding				border-width			margin
+단축 프로퍼티					
+
+스타일 관련										border-top-style
+프로퍼티											border-right-style
+												border-bottom-style
+												border-left-style
+
+스타일 관련										border
+단축 프로퍼티		
+
+색 관련						패딩은 색이			border-top-color		여백은 투명함.
+프로퍼티						없음					border-right-color
+												border-bottom-color
+												border-left-color
+
+색 관련											border-color
+단축 프로퍼티
+
+전체 단축										border
+프로퍼티
+
+		박스의 색
+
+패딩의 색은 따로 없으며 태그의 배경색이 패딩에 칠해진다. 여백 색도 강제로 줄 수 없다.
+여백은 투명하게 처리되어 부모 태그의 배경색이 비춰 보인다. 테두리 색은 개발자들이 임의의 줄 수 있다.
+
+		테두리의 두께와 모양과 색
+
+테두리는 패딩이나 여백과 달리 두께(width), 모양(style), 색(color)을 지정하는 여러 프로퍼티를 두고 있다.
+<p> 태그에 테두리를 꾸며보자
+
+p {
+	border-width: 3px;
+	border-style: dotted;
+	border-color: blue;
+}
+
+<p> 박스 모델 </p>
+
+테두리 두께는 border-width에 3px 처럼 직접 값을 줄 수 있지만, 정확한 수치가 필요 없는 경우 thin, medium, thick 으로 지정할 수 있다.
+텓리 모양을 나타내는 border-style 프로퍼티의 값은 다음과 같은 것들이 있다.
+
+none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset
+
+다음은 왼쪽 테두리만 꾸민 것이다.
+
+p {
+	border-left-width: 3px;
+	border-left-style: dotted;
+	border-left-color: blue;
+}
+
+<p>박스 모델</p>
+
+		테두리를 꾸미는 단축 프로퍼티
+
+border 프로퍼티는 다음과 같이 테두리의 두께(width), 테두리 선 스타일(style), 테두리 선색(color)을 한번에 지정한다.
+
+border: width style color
+
+다음은 단축 프로퍼티 예이다.
+
+p {
+	border: 3px dotted blue;
+}
+
+Example 4-12		박스 모델 활용
+Example 4-13		다양한 테두리 선 스타일
+
+			고급 테두리 꾸미기
+
+CSS3는 둥근 모서리 테두리나 이미지 테두리 등 고급 테두리를 지원한다.
+
+		border-radius		둥근 모서리 테두리
+
+border-radius 프로퍼티를 이용하면 테두리의 모서리를 둥글게 만들 수 있다.
+다음은 모서리 모두 반지름이 50px인 둥근 모서리를 만든 예이다.
+
+border-radius: 50px;
+
+모서리마다 반지름을 다르게 구성할 수 있으며, border-top-left, border-top-right, border-bottom-left, border-bottom-right
+프로퍼티에 반지름 값을 주면 된다. 다음은 border-radius에 각 모서리의 반지름을 0, 20, 40, 60px로 준 예이다.
+
+border-radius: 0px 20px 40px 60px;
+
+Example 4-14		다양한 둥근 모서리 테두리
+
+		border-image	이미지 테두리
+
+border-image 프로퍼티를 이용하면 테두리에 이미지를 입힐 수 있다.
+테두리를 모서리(corner)와 에지(edge)로 구분하여 각각 이미지를 입힐 수 있다.
+다음은 테두리에 이미지를 입히는 예이다.
+
+border-image: url("border.png") 30 round;
+
+border-width 프로퍼티는 0이 아닌 값이 설정되야 하며 border-style이 먼저 지정되어야 한다.
+
+다음은 이미지 테두리를 만드는 과정이다.
+
+ 1 원본 이미지 준비
+
+테두리에 입힐 이미지를 준비
+
+ 2 모서리와 에지 
+
+이미지는 네 모서리 30 x 30 픽셀 크기로 잘려서 4개의 모서리 이미지와 4개의 에지 이미지가 만들어진다.
+
+ 3 모서리 이미지와 에지 이미지 배치
+
+만들어진 4개의 모서리와 에지로 각 테두리에 배치한다.
+
+- round : 에지 이미지 반복 배치. 테두리 길이만큼 에지 이미지 크기 자동 조절
+- repeat : 에지 이미지 반복 배치. 에지 이미지 크기 자동 조절 안됨
+- stretch : 에지 이미지를 테두리 길이만큼 늘여 배치
+
+Example 4-15	이미지 테두리 만들기
+
+			배경
+
+HTML 태그에 배경색을 칠하거나 배경 이미지를 출력하는 방법을 알아보자.
+
+		background-color, background-image		배경에 색 또는 이미지로 그릴지 정한다.
+
+각각 배경색과 배경 이미지를 지정한다. 둘이 동시에 지정 시 배경색이 먼저 칠하고 배경 이미지를 칠하므로 이미지가
+출력되지 않는 영역에만 배경색이 보인다.
+
+div {
+	background-color: skyblue;
+	background-image: url("banana.jpg")
+}
+
+		background-position		배경 이미지의 위치
+
+이 프로퍼티는 박스 내 배경 이미지의 시작 위치를 정한다.
+left top(디폴트), left center, left bottom, right top, right center, right bottom, center top, center center, center bottom
+등 다양하게 지정 가능하다.
+
+background-position: center center
+
+		background-size		배경 이미지의 크기
+
+배경 이미지의 실제 크기에 상관없이 출력되는 크기를 지정한다. 다음은 100x100 픽셀 크기로 출력한다.
+
+background-size: 100px 100px;
+
+		background-repeat	배경 이미지 반복 출력
+
+배경 이미지를 반복 출력하는 방식을 지정한다. no-repeat, repeat(디폴트), repeat-x, repeat-y 중 선택이 가능하다.
+repeat는 박스 내의 x, y 두 방향으로 반복 출력하고, repeat-x, repeat-y는 한 방향으로만 반복 출력한다.
+
+background-repeat: repeat-y;
+
+		background 단축 프로퍼티
+
+background는 단축 프로퍼티로서, color image position/size repeat origin 순으로 값을 지정한다.
+
+div {
+	background: skyblue url("banana.jpg") center center/100px 100px repeat-y;
+}
+
+배경색이나 배경 이미지만 지정할 수도 있다.
+
+background: skyblue;
+background: url("banana.jpg");
+
+Example 4-16		<div> 박스에 배경 꾸미기

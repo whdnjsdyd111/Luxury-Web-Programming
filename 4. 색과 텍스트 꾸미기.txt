@@ -1,0 +1,141 @@
+			색
+
+CSS3에서 색은 RGB, RGBA, HSL 등 3 가지 방법으로 표현한다.
+
+		16 진수 코드로 색 표현
+
+HTML 언어와 마찬가지로 CSS3에서는 색은 빛의 3원색 빨강(red), 초록(green), 파랑(blue)의 성분으로
+#rrggbb의 16진수 코드로 표현한다.
+
+각 성분은 0~255(8비트)의 정수이며 16진수(0~0xFF)로 표현한다.
+다음은 <div>를 보라색으로 출력하는 CSS3 스타일 시트이다.
+
+div { color: #8A2BE2; }
+
+CSS3 에서 하나의 색은 총 24비트로 약 1600만개의 색을 표현 가능하다.
+
+		10진수 코드와 RGB()로 표현
+
+다음은 RGB() 표기법으로 r, g, b의 각 성분을 0~255 사이의 10진수로 색을 표현한다.
+이전의 예와 같이 보라색으로 출력하는 스타일 시트이다.
+
+div { color: rgb(138, 43, 226); }
+
+		색 이름으로 표현
+
+CSS3 표준에는 총 140개의 색 이름을 정하고 있어 쉽게 색 표현이 가능하다.
+aqua, red, blue, black, orange 등 많은 색 이름이 있다.
+다음은 이전 예와 같다.
+
+div { color: blueviolet; }
+
+CSS3 색 이름과 코드 예
+
+이름				16진수 코드		rgb()
+
+brown			#A52A2A		rgb(165, 42, 42)
+blueviolet		#8A2BE2		rgb(138, 43, 226)
+darkorange		#FF8C00		rgb(255, 140, 0)
+
+Example 4-08		색 활용
+
+			텍스트
+
+CSS3로 문단 들여쓰기나 문단 정렬 등 텍스트의 출력 모양을 세밀하게 제어할 수 있다.
+들여쓰기(text-indent), 정렬(text-align), 텍스트 꾸미기(text-decoration)에 대해 알아보자.
+프로퍼티는 다음과 같은 형태이다.
+
+text-indent : <length> | <percentage>;
+text-align : left | right | center | justify;
+text-decoration : none | underline | overline | line-through;
+
+text-indent 프로퍼티에서 <length>는 고정된 길이로, <percentage>는 텍스트 블록 전체 폭에 대한 비율이다.
+text-align 에서 justify는 양쪽 정렬을, center는 중앙정렬,을 한다.
+text-decoration 프로퍼티는 텍스트에 줄을 치는 담당을 한다. 하이퍼링크에 밑줄이 출력되지 않게 할 수도 있다.
+
+Example 4-09		텍스트 꾸미기
+
+			CSS3의 표준 단위
+
+스타일 시트를 지정할 때 크기나 두께, 높이 등에 px, %, em과 같은 다양한 단위가 있다.
+
+단위		의미			사용 예
+
+em		배수			font-size: 3em;		현재 폰트의 3배 크기
+%		퍼센트		font-size: 500%		현재 폰트의 500% 크기
+px		픽셀 수		font-size: 10px		10픽셀 크기
+cm		센티미터		margin-left: 5cm	왼쪽 여백 5cm
+mm		밀리미터		margin-left: 10mm	왼쪽 여백 10mm
+in		인치, 1in = 2.54cm = 96px		margin-left: 2in;		왼쪽 여백 2인치
+pt		포인터, 1pt = 1in의 1/72크기		margin-left: 20pt		왼쪽 여백 20포인트
+pc		피카소(picas), 1pc = 12pt		font-size: 1pc;			1pc 크기의 폰트
+deg		각도			transform: rotate(20deg)		시계 방향으로 20도 회전
+
+			폰트
+
+폰트는 글자체이다. W3C는 폰트를 지정하기 위해 써 왔던 <font> 태그를 HTML 4.0 이후부터 폐기하고
+CSS 언어로 표현하도록 표준화하였다.
+
+		CSS3의 다양한 폰트
+
+Times New Roman, Arial, Tohoma, Verdana 등 많은 폰트를 제공한다.
+
+폰트는 삐침(serif) 여부와 글자 폭의 특징에 따라 Serif, Sans-Serif, Monospace 형으로 분류된다.
+Serif는 삐침이란 뜻으로 글자의 끝에 삐침 선을 가진 폰트 형이며
+Sans는 없다라는 뜻으로 삐침이 없는 폰트 형을 말하며
+삐침 여부와 상관없이 모든 글자의 폭이 동일한 Monospace 형이있다.
+
+		font-family		폰트 패밀리
+
+font-family 프로퍼티에는 구체적은 폰트 이름을 지정한다. 하지만 브라우저가 지원되지 않을 시에
+대비하여 다음과 같이 여러 폰트를 지정하여 나열된 순서대로 폰트가 선택되도록 해야한다.
+
+font-family: Arial, "Time New Roman", Serif;
+
+Arial을 지시하며 없을 경우, "Time New Roma"을 지시하고 이도 없을 경우 Serif을 사용한다.
+"Time New Roman" 처럼 이름에 공백이 낀 경우 ""으로 묶어 표현한다.
+
+		font-size		폰트 크기
+
+font-size 프로퍼티에는 글자 크기를 지정한다.
+15px 등 절대 수치로 지정하거나, 절대 수치가 필요 없는 경우 medium, small, large 등으로 적당히 지정할 수 있다.
+
+font-size: 40px;		40px 크기
+font-size: medium;		중간 크기
+font-size: 1.6em;		1.6배 크기
+
+		font-style		폰트 스타일
+
+font-style 프로퍼티에는 폰트 스타일을 나타내는 nomal, italic, oblique 중 하나를 지정한다.
+하나의 폰트는 이 3종류의 스타일을 세트로 가지는데,
+nomal 은 전형적인 스타일이며,
+italic은 필기체,
+oblique는 italic과는 조금 다른 약간의 기울인 스타일이다.
+
+font-style: italic;
+
+		font-weight		폰트 굵기
+
+font-weight에는 100~900 사이의 숫자로 글자의 굵기를 지정한다. 정확한 수치가 필요 없을 시
+nomal, bold, bolder, lighter에서 지정하면 된다. nomal은 400, bold는 700이다.
+
+font-weight: 300;
+font-weight: bold;
+
+		font		단축 프로퍼티
+
+font 프로퍼티는 font-style, font-weight, font-size, font-family 를 순서대로 지정하는 단축 프로퍼티이다.
+
+font : font-style	font-weight		font-size		font-family
+
+다음은 20픽셀로 이탤릭 스타일에 bold 굵기의 consolas 체로 지정하는 예이다.
+
+font: italic bold 20px consolas, sans-serif
+
+font-size와 font-family는 반드시 지정되야 하며 나머지는 생략이 가능하다. 생략 시 디폴트 처리된다.
+
+	폰트 크기 px과 em
+
+폰트 크기는 절대 크기인 픽셀과 상대 크기인 em으로 지정하는 것이 바람직 하다.
+
+Example 4-10		CSS3 폰트 활용

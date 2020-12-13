@@ -1,0 +1,142 @@
+CSS3로 HTML 태그를 고정 출력하거나 그 자리에 보이게 하거나 숨기거나 할 수도 있다.
+이렇게 태그가 출력되는 위치를 지정하는 것을 배치(positioning)라고 부른다.
+배치에 관하여 관련된 CSS3 프로퍼티들은 다음과 같다.
+
+- display
+- position
+- left, right, top, bottom
+- float
+- z-index
+- visibility
+- overflow
+
+			블록 박스와 인라인 박스
+
+- 블록 태그 예 <p>, <h1>, <div>, <ul>
+- 인라인 태그 예 <span>, <a>, <img>
+
+<div> 처럼 블록 박스는 새로운 라인에서 시작하여 라인 끝까지 차지하여 옆에는 다른 태그가 배치되지 않는다.
+하지만 <span>과 같은 인라인 박스는 블록 박스 내에 순서대로 배치된다.
+
+			display		박스의 유형 제어
+
+		display 프로퍼티
+
+display 프로퍼티를 이용하면 디폴트 박스 유형을 무시하고 HTML 태그의 박스 유형을 달리 지정할 수 있다.
+CSS3의 박스 유형은 3가지이며 display 프로퍼티에 다음과 같이 지정한다.
+
+- 블록 박스 display : block
+- 인라인 박스 display : inline
+- 인라인 블록 박스  display : inline-block
+
+	블록박스							인라인 박스							인라인 블록 박스
+
+항상 새 라인에 시작					새 라인에 시작 못함				새라인에 시작 못함
+
+블록 박스 내에만 배치					모든 박스 내 배치 가능			모든 박스 내 배치 가능
+
+옆에 다른 요소 배치 불가능				옆에 다른 요소 배치 가능			옆에 다른 요소 배치 가능 (여기까지 인라인 속성)
+
+width와 height으로 크기 조절			width와 height으로 조절 불가능	width와 height으로 크기 조절
+
+padding, border, margin 조절 가능	margin-top, margin-bottom		padding, border, margin 조절 가능(여기까지 블록 속성)
+										조절 불가능
+
+		display : block
+
+display : block 스타일로 지정되면 width와 height 값을 주어 태그가 출력되는 블록 박스의 크기를 변경할 수 있고, 
+한 줄을 독점적으로 차지하여 양 옆에 다른 요소가 배치되지 않는다.
+다음은 <span> 태그를 블록 박스로 변경하는 예이다.
+
+span {
+	display: block;
+	width: 100px;
+	height: 60px;
+}
+
+<div>
+	<span>block span</span>
+	입니다
+</div>
+
+		display : inline
+
+display : inline을 지정하여 인라인 박스로 변경하는 예이다.
+
+div div {
+	display : inline;
+	width: 100px;
+	height: 60px;
+}
+
+<div>
+	<div>inline DIV</div>
+	<div>inline DIV</div>
+	<div>inline DIV</div>
+	모두 한 라인에 출력됨
+</div>
+
+		display : inline-block
+
+인라인 블록은 인라인 박스이면서 블록 박스처럼 height과 width로 크기 조절이 가능하며 패딩과 마진도 조절할 수 있다.
+
+div div {
+	display: inline-block;
+	border: 2px dotted orangered;
+	background: powderblue;
+	margin: 10px;
+	width: 60px; height: 80px;
+}
+
+<div style="background: orange">
+	<div>inline-block DIV</div>
+	<div>inline-block DIV</div>
+	<div>inline-block DIV</div>
+	블록들 모두 한 라인에 출력
+</div>
+
+Example 5-01
+
+			position		박스의 배치
+
+브라우저는 웹 페이지에 나타난 순서대로 HTML 태그를 배치하며 이를 nomal flow 라고 부른다.
+position 프로퍼티를 이용하면 nomal flow를 무시하고 원하는 위치에 박스를 배치할 수 있다.
+position으로 지정할 수 있는 종류는 다음과 같다.
+
+- 정적 배치 position : static (디폴트)
+- 상대 배치 position : relative
+- 절대 배치 position : absolute
+- 고정 배치 position : fixed
+- 유동 배치 float : left 혹은 float : right
+
+position 프로퍼티 사용할 때, HTML 태그의 위치와 크기는 다음 프로퍼티로 조절한다.
+
+top, bottom, right, left, width, height
+
+		position : static		정적 배치
+
+정적 배치는 웹 페이지가 작성된 순서대로 HTML 태그의 출력 위치를 정하는 방식으로, 브라우저의 디폴트 배치 방식이다.
+그래서 left, top 등 프로퍼티의 값은 위치에 영향을 주지 않는다. 태그의 크기 또한 콘텐츠의 크기에 의해 정해지므로
+width, height 또한 영향을 주지 않는다.
+
+		position : relative		상대 배치
+
+nomal flow에 따라 HTML 태그가 출력되는 위치를 '기본 위치'라고 한다.
+position: relative 스타일을 주면 '기본 위치'에서 left, top, bottom, right 프로퍼티의 값만큼 이동한 '상대 위치'에 배치된다.
+
+각 프로퍼티는 값(음수 또는 양수)에 따라 이동 방향이 다르다. 
+top과 bottom이 동시 지정되면 bottom이 무시되며 left와 right가 동시 지정되면 right가 무시된다.
+
+Example 5-2		상대 배치
+
+		position : absolute		절대 배치
+
+position: absolute 를 사용하면 HTML 태그를 절대 위치에 배치할 수 있다.
+절대 위치는 left, top, bottom, right 프로퍼티 값으로 정하며, 이 값들은 부모 태그 안에서의 상대 좌표이다.
+
+Example 5-03		절대 배치
+
+		position : fixed		고정 배치
+
+스크롤하거나 브라우저의 크기를 변경해도 HTML 태그가 뷰포트(브라우저 윈도우)의 오른쪽 바닥에 항상 보이도록 하는거 것이 고정 배치이다.
+position : fixed 는 left, top, right, bottom 프로퍼티의 값으로 뷰포트의 특정 위치

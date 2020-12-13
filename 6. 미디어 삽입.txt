@@ -1,0 +1,94 @@
+			<audio>, <video>	미디어의 표준화
+
+HTML5 이전까지는 오디오나 비디오를 재생하기 위해 브라우저에 적절한 플러그인(plug-in) 소프트웨어를 설치해야 했다.
+플러그인이란 브라우저가 처리할 수 없는 비표준 형식의 데이터를 전용으로 다루는 내장형 소프트웨어로 ActiveX 가 대표적이다.
+비표준 미디어를 포함한 웹 페이지는 브라우저에 따라 재생되지 않는 문제점이 있었다.
+이 문제를 해결하기 위해 HTML5에서는 플러그인 없이 오디오나 비디오를 재생할 수 있도록 다음 태그를 표준화했다.
+
+<audio>, <video>
+
+물론 플래시 애니메이션과 같이 표준화되지 않은 미디어를 재생하기 위해서는 여전히 플러그인의 설치가 필요하며, 이 경우 다음 두 태그를 사용한다.
+
+<embed>, <object>		11장 5절에서 다룸
+
+			<video>		비디오 삽입
+
+HTML5에서는 <video> 태그를 이용하여 다음과 같이 비디오를 삽입한다.
+
+<video src="bear.mp3" width="320" height="240" controls autoplay></video>
+
+<video></video> 사이에는 브라우저가 <video> 태그를 지원히지 않을 때 출력하는 텍스트를 지정한다.
+비디오 소스는 <source> 태그를 이용하여 다음과 같이 별도로 지정할 수도 있다.
+
+<video width="320" height="240" controls autoplay>
+	<source src="bear.mp4" type="video/mp4">
+	브라우저가 video 태그를 지원하지 않습니다.
+</video>
+
+Example 2-14	<video> 태그로 비디오 삽입	https://media.w3.org/2010/05/bunny/movie.ogv 를 사용해도 된다.
+
+브라우저마다 특정 타입의 비디오 파일만 인실할 수 있어 개발자는 하나의 비디오도 여러 타입을 만들어 두고,
+각 브라우저마다 재생 가능한 타입을 선택하도록 할 수 있다. 다음은 mp4와 ogg 타입으로 각각 인코딩된 2개의 비디오를 주어
+브라우저가 재생 가능한 비디오 타입을 선택하게 하는 예이다. mp4가 재생이 안된다면 bear.ogg를 재생한다.
+
+<video width="320" height="240" controls autoplay>
+	<source src="bear.mp4" type="video/mp4">
+	<source src="bear.mp4" type="video/ogg">
+	브라우저가 video 태그를 지원하지 않습니다.
+</video>
+
+다음은 HTML5의 <video> 태그와 <source> 태그이다.
+
+<video	src="비디오 파일 URL"
+		width="재생 영역의 폭"
+		height="재생 영역의 높이"
+		controls
+		autoplay
+		muted
+		loop>
+	태그 지원을 안할 시 출력되는 메시지
+</video>
+
+- width, height : 폭과 높이. 생략되면 비디오의 원본 크기로 설정
+- controls : 재생, 재생 시간, 중단, 음소거 등 제어 버튼 출력
+- autoplay : 비디오 로딩 즉시 재생
+- loop : 반복 재생
+- muted : 오디오를 끌 때 사용
+
+<source	src="비디오 URL"
+		type="비디오의 마임 타입">
+
+비디오	마임 타입
+
+MP4		video/mp4
+WebM	video/webm
+Ogg		video/ogg
+
+			<audio>		오디오 삽입
+
+<audio> 태그를 이용하여 다음과 같이 오디오를 삽입한다.
+
+<audio src="mymusic.mp3" controls autoplay loop></audio>
+
+다음은 <audio> 태그의 속성 구성이다.
+
+<audio	src="오디오 파일의 URL"
+		controls
+		autoplay
+		loop>
+
+<video> 태그와 마찬가지로 <source> 태그로 mp3과 ogg 등 재생 가능한 타입을 선택할 수 있다.
+
+<audio controls autoplay>
+	<source src="mymusic.mp3" type="audio/mpeg">
+	<source src="mymusic.ogg" type="audio/ogg">
+	브라우저가 video 태그를 지원하지 않습니다.
+</audio>
+
+오디오	마임 타입
+
+MP3		audio/mpeg
+Wav		audio/wav
+Ogg		audio/ogg
+
+Example 2-15		<audio> 태그로 오디오 삽입
